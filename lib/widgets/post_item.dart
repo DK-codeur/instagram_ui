@@ -12,38 +12,30 @@ class PostItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
 
         children:[
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:[
-                Row( // pic & name
-                  children:[
-                    CircleAvatar(
-                      backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2019/03/09/21/30/downtown-4045036_960_720.jpg"),
-                    ),
-
-                    SizedBox(width: 15,),
-                    
-                    Text(
-                      "zinedine_zid",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500
-                      ),
-                    )
-                  
-                  ],
-                ),
-                Icon(Icons.more_vert, color: Colors.white,)
-              ],
+          
+          //Partie A
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2019/03/09/21/30/downtown-4045036_960_720.jpg"),
             ),
+
+            title: Text(
+              "zinedine_zid",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w500
+              ),
+            ),
+
+            trailing: Icon(Icons.more_vert, color: Colors.white,),
           ),
           
           SizedBox(height: 12,),
 
-          Container( //post image
+
+          //Partie B
+          Container( 
             height: 350,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -55,7 +47,9 @@ class PostItem extends StatelessWidget {
 
           SizedBox(height: 10,),
 
-          Padding( //row icon
+
+          //Partie C
+          Padding(
             padding: const EdgeInsets.only(left: 15,right: 15,top: 3),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,7 +71,8 @@ class PostItem extends StatelessWidget {
 
           SizedBox(height: 12,),
 
-          Padding(//RichText 1
+          //Partie D
+          Padding(
             padding: const EdgeInsets.only(left: 15,right: 15),
             child: RichText(text: TextSpan(
               children: [
@@ -118,7 +113,7 @@ class PostItem extends StatelessWidget {
 
           SizedBox(height: 12,),
 
-          Padding( //RichText 2
+          Padding(
             padding: EdgeInsets.only(left: 15,right: 15),
             child: RichText(
               text: TextSpan(
@@ -145,20 +140,22 @@ class PostItem extends StatelessWidget {
 
             SizedBox(height: 12,),
 
-            Padding(
-              padding: EdgeInsets.only(left: 15,right: 15),
-              child: Text(
-                "Voir les 123 commentaires",style: TextStyle(
-                  color: Colors.white.withOpacity(0.5),
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500
-                ),
+
+          //Partie E
+          Padding(
+            padding: EdgeInsets.only(left: 15,right: 15),
+            child: Text(
+              "Voir les 123 commentaires",style: TextStyle(
+                color: Colors.white.withOpacity(0.5),
+                fontSize: 15,
+                fontWeight: FontWeight.w500
               ),
             ),
+          ),
 
-            SizedBox(height: 12,),
+          SizedBox(height: 12,),
 
-            Padding(//add comment section
+          Padding(
               padding: EdgeInsets.only(left: 15,right: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

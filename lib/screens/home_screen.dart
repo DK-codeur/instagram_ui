@@ -53,13 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   StoryItem(),
                   StoryItem(),
                   StoryItem(),
-                  StoryItem(),
                 ],
               ),
             ),
 
-            PostItem()
-
+            PostItem() //Appelation de la class PostItem du fichier post_item.dart
           ],
         ),
       ),
